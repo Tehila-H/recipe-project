@@ -1,0 +1,48 @@
+<div id="editR" dir="rtl">
+<b>שם המתכון:</b>
+<div>
+    <input type="text" class="name" [(ngModel)]="myRecipe.NameRp" />
+</div>
+
+<b>זמן הכנה: </b>
+<div>
+    <input type="number" class="time" [(ngModel)]="myRecipe.PreparationTime" min="1"/>
+</div>
+
+<b>דרגת קושי:</b>
+<div>
+    <input type="number" class="level" [(ngModel)]="myRecipe.LevelOfDifficulty" min="1" max="5"/>
+</div>
+
+<b>מרכיבים:</b>
+<div *ngFor="let x of myRecipe.IngredientsList; let i=index; trackBy:funcindex" >
+    <input type="text" class="ingr" (keyup)="addIngredientsList()" [(ngModel)]="myRecipe.IngredientsList[i]" value="x"/>
+</div>
+
+<b>הוראות הכנה: </b>
+<div *ngFor="let x of myRecipe.Preparation; let i=index; trackBy:funcindex" >
+    <input type="text" class="pre" (keyup)="addPreparation()" [(ngModel)]="myRecipe.Preparation[i]" value="x"/>
+</div>
+
+<b>בחר קטגוריה: </b>
+<div>
+    <select [(ngModel)]="myChoose">
+        <option *ngFor="let x of myCategory">{{x}}</option>
+    </select>
+</div>
+
+<b>בחר תמונה:</b>
+<div id="ss" *ngFor="let x of arrImg">
+    <img class="selectImg" src="{{x}}" (click)="change(x)"/>
+</div>
+<div id="stam"></div>
+<br/>
+<div>
+    <input type="button" class="btn a" value="שמור שינויים" (click)="saveChanges()"/>
+</div>
+
+<div>
+    <input type="button" class="btn a c" value="ביטול" (click)="cancel()"/>
+</div>
+
+</div>

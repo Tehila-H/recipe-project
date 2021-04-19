@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    direction: rtl;
+    background-image:url("./assets/r1.jpg");
+    /* text-align: right;
+
+    padding-right: 1.5cm; */
+    /* opacity: 20%; */
+}
+
+.btn{
+    background-color:rgb(206, 187, 164);
+    color: rgb(206, 41, 96);
+}
+
+.btn:hover{
+    background-color: grey;
+}
+
+b{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

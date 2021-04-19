@@ -1,0 +1,61 @@
+<p></p>
+<!-- <form> -->
+<div id="allTheRecipe" >
+<div>שם המתכון:</div>
+<div>
+    <input type="text" class="name" [(ngModel)]="myRecipe.NameRp" required #nameRp="ngModel"/>
+    <div *ngIf="!nameRp.valid && nameRp.touched">*שם המתכון זהו שדה חובה</div>
+</div>
+
+<div>זמן הכנה: </div>
+<div>
+    <input type="number" class="time" [(ngModel)]="myRecipe.PreparationTime" min="1" required #time="ngModel"/>
+    <div *ngIf="!time.valid && time.touched">*זמן הכנה זהו שדה חובה</div>
+</div>
+
+<div>דרגת קושי:</div>
+<div>
+    <input type="number" class="level" [(ngModel)]="myRecipe.LevelOfDifficulty" min="1" max="5" required #level="ngModel"/>
+    <div *ngIf="!level.valid && level.touched">*דרגת קושי זהו שדה חובה</div>
+    <!-- <div *ngIf="!level.valid && ">*דרגת הקושי יכולה להיות מקסימום 5</div> -->
+</div>
+
+<div>מרכיבים:</div>
+<div *ngFor="let x of arrNewRecipe; let i=index; trackBy:funcindex" >
+    <input type="text" (keyup)="add()" [(ngModel)]="arrNewRecipe[i]" value="x" required #ing="ngModel"/>
+    <div *ngIf="!ing.valid && ing.touched">*חובה שיהיה למתכון לפחות מרכיב אחד</div>
+</div>
+
+<div>הוראות הכנה: </div>
+<div *ngFor="let x of newPreparation; let i=index; trackBy:funcindex" >
+    <input type="text" class="pre" (keyup)="addPreparation()" [(ngModel)]="newPreparation[i]" value="x" required #pre="ngModel"/>
+    <div *ngIf="!pre.valid && pre.touched">*הוראות הכנה אלו שדות חובה</div>
+</div>
+
+<div>בחר קטגוריה: </div>
+<div>
+    <select [(ngModel)]="myChoose" required #cat="ngModel">
+        <option *ngFor="let x of myCategory">{{x}}</option>
+        <div *ngIf="!cat.valid && cat.touched">*חובה לבחור קטגוריה למתכון</div>
+    </select>
+</div>
+
+<div>
+    <b>האם להציג את התמונה?</b>
+   <div><input type="checkbox" [(ngModel)]="myRecipe.IsDisplay"/></div> 
+</div>
+
+<div>בחר תמונה:</div>
+<div *ngFor="let x of arrImg">
+    <img class="selectImg" src="{{x}}" (click)="change(x)" />
+</div>
+<div id="stam"></div>
+<br/>
+<div>
+    <input type="button" class="btn" value="שמור מתכון"  (click)="save()"/>
+</div>
+</div>
+<!-- </form> -->
+<!-- [disabled]="!allTheRecipe.valid" -->
+
+

@@ -1,0 +1,55 @@
+.selectImg{
+    width: 110px;
+    height: 90px;
+    float: left;
+    margin: 12.5px;
+}
+
+.selectImg:hover{
+    opacity: 80%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#ss{
+    margin-right: -20px;
+}
+
+#editR{
+    /* direction: rtl; */
+    /* padding: auto auto auto auto; */
+    /* margin: auto; */
+    text-align: right;
+    padding-right: 1.5cm;
+}
+
+.ingr{
+    width: 180px;
+    height: 42px;
+}
+
+.pre{
+    width: 650px;
+    height: 42px;
+}
+
+.level{
+    width: 50px;
+}
+
+.time{
+    width: 50px;
+}
+
+.name{
+    width: 150px;
+}
+
+.a{
+    margin: 14px;
+    float: right;
+}
+
+/* .c{
+    float: right;
+} */

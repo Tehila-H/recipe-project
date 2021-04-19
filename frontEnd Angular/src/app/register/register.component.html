@@ -1,0 +1,156 @@
+
+<!-- <div id="pic"> -->
+<!-- <form [formGroup]="myForm" (ngSubmit)="toAdd(); myForm.reset()">
+   
+    <div>
+        <input type="text" placeholder="שם משתמש" formControlName="name" />
+        <div *ngIf="myForm.controls.name.touched && myForm.controls.name.errors">
+            *שם זהו שדה חובה
+        </div>
+    </div>
+    <div>
+        <input type="text" placeholder="כתובת" formControlName="adress" />
+        <div *ngIf="myForm.controls.adress.touched && myForm.controls.adress.errors">
+            *כתובת זהו שדה חובה
+        </div>
+    </div>
+    <div>
+        <input type="text" placeholder="מייל" formControlName="mail" />
+        <div *ngIf="myForm.controls.mail.touched && myForm.controls.mail.errors?.required">
+            *מייל זהו שדה חובה
+        </div>
+        <div class="pat" *ngIf="myForm.controls.mail.touched && myForm.controls.mail.errors?.pattern">
+            *כתובת המייל חייבת להכיל כמה תווים וכן את התו@ וכן נקודה
+        </div> 
+    </div>
+    <div>
+        <input type="password" placeholder="סיסמה" formControlName="password"/>
+        <div *ngIf="myForm.controls.password.touched && myForm.controls.password.errors?.required">
+            *סיסמה זהו שדה חובה
+        </div>
+        <div class="pat" *ngIf="myForm.controls.password.touched && myForm.controls.password.errors?.pattern">
+            *סיסמה יכולה להכיל רק מספרים בין 1 ל 10
+        </div> 
+    </div>
+    <div>
+        <input type="submit" value="הרשם" [disabled]="!myForm.valid"/>
+    </div>
+</form> -->
+<!-- </div> -->
+
+<!-- <div id="pic">
+    <img src="./assets/r1.jpg">
+  </div> -->
+
+
+<!-- codePen -->
+  <div class="login-card" id="hh">
+    <h1>הרשם</h1><br>
+  <form [formGroup]="myForm" (ngSubmit)="toAdd(); myForm.reset()">
+<!-- name -->
+    <input type="text" formControlName="name" name="user" placeholder="שם משתמש">
+    <div class="err" *ngIf="myForm.controls.name.touched && myForm.controls.name.errors">
+      *שם משתמש זהו שדה חובה
+    </div>
+
+<!-- aderss -->
+    <input type="text" formControlName="adress" name="adrs" placeholder="כתובת">
+    <div class="err" *ngIf="myForm.controls.adress.touched && myForm.controls.adress.errors">
+        *כתובת זהו שדה חובה
+    </div>
+
+    <!-- mail -->
+    <input type="text" formControlName="mail" name="mail" placeholder="אימייל">
+    <div class="err" *ngIf="myForm.controls.mail.touched && myForm.controls.mail.errors?.required">
+        *מייל זהו שדה חובה
+    </div>
+    <div class="pat" class="err" *ngIf="myForm.controls.mail.touched && myForm.controls.mail.errors?.pattern">
+        *כתובת המייל חייבת להכיל כמה תווים וכן את התו@ ונקודה
+    </div> 
+
+    <!-- password -->
+    <input type="password" formControlName="password" name="pass" placeholder="סיסמה">
+    <div class="err" *ngIf="myForm.controls.password.touched && myForm.controls.password.errors">
+        *סיסמה זהו שדה חובה
+    </div>
+
+    <!-- confirmPassword -->
+    <input type="password" formControlName="confirmPassword" name="pass" placeholder="אימות סיסמה">
+    <div class="err" *ngIf="myForm.controls.confirmPassword.touched && myForm.controls.confirmPassword.errors">
+        *אימות הסיסמה זהו שדה חובה
+    </div>
+    <div  *ngIf="myForm.controls.password.touched && myForm.controls.confirmPassword.touched && myForm.errors?.confirmError">
+        {{myForm.errors.confirmError.message}}
+    </div>
+
+    <input type="submit" name="login" class="login login-submit" value="הרשם" [disabled]="!myForm.valid">
+  </form>
+    
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form [formGroup]="myForm" (ngSubmit)="toAdd(); myForm.reset()">
+    <p></p>
+    <div>
+        <input type="text" placeholder="שם משתמש" name="name" formControlName="name" [(ngModel)]="myUser.Name"/>
+        <div *ngIf="myForm.controls.name.touched && myForm.controls.name.errors">
+            *שם זהו שדה חובה
+        </div>
+    </div>
+    <div>
+        <input type="text" placeholder="כתובת" name="adress" [(ngModel)]="myUser.Adress"/>
+        <div *ngIf="myForm.controls.adress.touched && myForm.controls.adress.errors">
+            *כתובת זהו שדה חובה
+        </div>
+    </div>
+    <div>
+        <input type="text" placeholder="מייל" formControlName="mail" [(ngModel)]="myUser.Mail"/>
+        <div *ngIf="myForm.controls.mail.touched && myForm.controls.mail.errors?.required">
+            *מייל זהו שדה חובה
+        </div>
+        <div class="pat" *ngIf="myForm.controls['mail'].touched && myForm.controls['mail'].errors?.pattern">
+            *כתובת המייל חייבת להכיל כמה תווים וכן את התו@ וכן נקודה
+        </div> 
+    </div>
+    <div>
+        <input type="number" placeholder="סיסמה" name="password" [(ngModel)]="myUser.Password"/>
+        <div *ngIf="myForm.controls.pasword.touched && myForm.controls.pasword.errors?.required">
+            *סיסמה זהו שדה חובה
+        </div>
+        <div class="pat" *ngIf="myForm.controls.pasword.touched && myForm.controls.pasword.errors?.pattern">
+            *סיסמה יכולה להכיל רק מספרים בין 1 ל 10
+        </div> 
+    </div>
+    <div>
+        <input type="submit" value="הרשם" [disabled]="!myForm.valid"/>
+    </div>
+</form> -->
+

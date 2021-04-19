@@ -1,0 +1,52 @@
+
+.selectImg{
+    width: 110px;
+    height: 90px;
+    float: left;
+    margin: 12.5px;
+}
+
+.selectImg:hover{
+    opacity: 80%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* .btn{
+    background-color:rgb(206, 187, 164);
+    color: rgb(206, 41, 96);
+}
+
+.btn:hover{
+    background-color: black;
+} */
+
+#stam{
+    width: 15px;
+    height: 160px;
+}
+
+#allTheRecipe{
+    /* direction: rtl; */
+    text-align: right;
+    padding-left: 8cm;
+    padding-right: 1.5cm;
+}
+
+.pre{
+    width:600px;
+    height: 42px;
+}
+
+.level{
+    width: 60px;
+}
+
+.time{
+    width: 60px;
+}
+
+.name{
+    width: 140px;
+}
+

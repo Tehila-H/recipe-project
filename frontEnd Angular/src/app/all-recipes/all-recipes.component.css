@@ -1,0 +1,24 @@
+.time{
+    width: 60px;
+}
+
+
+.allSea{
+    display: inline-block;
+    margin-left: 1cm;
+    margin-right: 1cm;
+}
+
+div{
+    direction: rtl;
+}
+
+#search{
+    margin-top: 10px;
+    text-align: center;
+}
+
+#allRecipes{
+    margin-left: 7.5cm;
+    /* text-align: center; */
+}

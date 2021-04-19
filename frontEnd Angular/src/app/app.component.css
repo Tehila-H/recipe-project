@@ -1,0 +1,25 @@
+body{direction: rtl;}
+
+.appNav{
+    height: 70px;
+}
+
+.nav-item a:hover{
+    color: palevioletred;
+    /* font-size: 22px; */
+    font: bold;
+}
+
+.nav-item{
+    padding-right: 50px;
+    padding-left: 50px;
+    font-size: 20px;
+}
+
+.nav-link{
+    color: white;
+}
+
+.navbar{
+    padding-right: 0px;
+}

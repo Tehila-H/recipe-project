@@ -1,0 +1,21 @@
+<div class="login-card" id="hh">
+    <h1>התחבר</h1><br>
+  <form [formGroup]="myForm" (ngSubmit)="checkIfExists()">
+
+    <input type="text" formControlName="userName" name="user" placeholder="שם משתמש">
+    <div class="err" *ngIf="myForm.controls.userName.touched && myForm.controls.userName.errors">
+      *שם משתמש זהו שדה חובה
+    </div>
+
+    <input type="password" formControlName="password" name="pass" placeholder="סיסמה">
+    <div class="err" *ngIf="myForm.controls.password.touched && myForm.controls.password.errors">
+      *סיסמה זהו שדה חובה
+    </div>
+
+    <input type="submit" name="login" class="login login-submit" value="התחבר" [disabled]="!myForm.valid">
+  </form>
+    
+  <!-- <div class="login-help">
+    <a href="#">Register</a> • <a href="#">Forgot Password</a>
+  </div> -->
+</div>

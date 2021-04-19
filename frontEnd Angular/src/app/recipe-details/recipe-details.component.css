@@ -1,0 +1,75 @@
+
+#allTheRecipe{
+    /* direction: rtl; */
+    text-align: right;
+    padding-right: 1.5cm;
+}
+
+#sizeImg{
+    width: 450px;
+    height: 400px;
+    /* direction: initial; */
+    /* align-items: center; */
+}
+
+/* #sizeImg:hover{
+    opacity: 20%;
+} */
+
+#nameRp{
+    /* background-image: url("/assets/bc.png"); */
+    /* padding-top: 15px; */
+    /* width: 280px; */
+    font-size: 40px;
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.IngredientsList{
+    direction: rtl;
+}
+
+.Preparation{
+    direction: rtl;
+}
+
+#iconIng{
+    width: 15px;
+    height: 25px;
+}
+
+#star{
+    margin-top: 10px;
+    /* float: right; */
+}
+
+.str{
+    float: right;
+    width: 18px;
+    height: 18px;
+    /* background-color: black; */
+}
+
+#time{
+    margin-top: 10px;
+}
+
+.u{
+    width: 200px;
+    height: 150px;
+}
+
+#y{
+    height: 25px;
+}
+
+.a{
+    margin: 10px;
+}
+
+.catIcon{
+    width: 40px;
+    height: 45px;
+}

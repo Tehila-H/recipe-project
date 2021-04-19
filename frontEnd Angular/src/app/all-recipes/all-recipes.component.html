@@ -1,0 +1,29 @@
+
+
+<div id="search">
+    <div class="allSea">
+        <div><b>חיפוש לפי שם מתכון</b></div>
+        <input type="text" [(ngModel)]="nameRp" placeholder="הקלד את שם המתכון" (keyup)="search()"/>
+    </div>
+    <div class="allSea">
+        <div><b>חיפוש לפי קטגוריה</b></div>
+        <select (click)="search()" [(ngModel)]="category">
+            <option *ngFor="let x of myCategory" >{{x}}</option>
+        </select>
+    </div>
+    <div class="allSea">
+        <div><b>חיפוש לפי משך הכנה</b></div>
+        <input type="number" class="time" [(ngModel)]="time" (keyup)="search()" />
+    </div>
+    <div class="allSea">
+        <input type="button" value="ביטול" class="btn" (click)="cancal()"/>
+    </div>
+</div>
+
+
+<div id="allRecipes">
+    <img-details *ngFor="let x of arrRecipeFilter;" [myRecipe]="x" ></img-details> 
+</div>
+
+
+

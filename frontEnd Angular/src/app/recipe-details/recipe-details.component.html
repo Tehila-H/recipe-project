@@ -1,0 +1,67 @@
+<!-- 
+    <div>
+    <img src="{{myRecipe.ImgRoute}}" class="smallImg" (click)="view(myRecipe.IdRp)"/>
+    <div>{{myRecipe.NameRp}}</div>
+    <div>{{myRecipe.PreparationTime}}</div>
+    <div>{{myRecipe.LevelOfDifficulty}}</div>
+    </div>
+     -->
+     <div id="allTheRecipe">
+        <div id="nameRp">{{myRecipe.NameRp}}</div>
+
+        <div><img src="{{myRecipe.ImgRoute}}" id="sizeImg"/></div>
+
+        <div id="time">
+          <b>זמן הכנה: </b>  
+            {{myRecipe.PreparationTime | minToHour}}</div>
+            
+        <!-- <div>
+            <div id="category">קטגוריה: {{myCategory[myRecipe.CodeCat-1]}}</div>
+            <img src="{{myIcons[myRecipe.CodeCat-1]}}"/>
+        </div> -->
+
+        <div>
+            <b>קטגוריה: </b>
+            <div>{{category1}}
+            <img class="catIcon" src="{{CategoryIcon}}"/>
+     </div>
+        </div>
+
+<br/>
+        <b id="star">דרגת קושי: </b>
+        
+        <div *ngFor="let x of arrLevel">
+            <img class="str" src="./assets/star.png"/>
+        </div>
+
+        <div id="y"></div>
+       <div> <b>מרכיבים: </b></div>
+        <div class="IngredientsList" *ngFor="let x of myRecipe.IngredientsList">
+          <img src="{{myIcon}}" id="iconIng"/>{{x}}
+        </div>
+<br/>
+        <b class="Preparation">אופן ההכנה: </b>
+        <div class="Preparation" *ngFor="let x of myRecipe.Preparation; let i=index">
+            {{i+1}}.     {{x}}
+        </div>
+        <br/>
+        <!-- <div id="">{{myRecipe.UserId}}</div> -->
+        <div>
+            <textarea rows="6" cols="50" name="textarea1" placeholder="שלח חוות דעת" [(ngModel)]="text"></textarea>
+          <div><input type="button" class="btn a" value="שלח" (click)="send()"/></div>  
+        </div>
+
+        <div *ngIf="myRecipe.UserId==thisUser.UserId">
+            <input type="button" class="btn a" value="עריכת המתכון" (click)="toEdit()"/>
+        </div>
+    </div>
+  
+    <!-- <div>
+        <input type="text" class="u" placeholder="שלח חוות דעת"/>
+    </div>   -->
+
+
+
+
+
+  
